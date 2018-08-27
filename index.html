@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app = "myApp">
+
+  <head>
+    <script data-require="angular.js@*" data-semver="4.0.0" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.10/angular.min.js"></script>
+    <script data-require="angular.js@*" data-semver="4.0.0" src="script.ts"></script>
+    <script data-require="angular.js@*" data-semver="4.0.0" src="system.config.js"></script>
+    <script data-require="angular.js@*" data-semver="4.0.0" src="tsconfig.json"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    
+  </head>
+
+  <body ng-controller="MyController">
+    <h1 class="text-center">My Github</h1>
+    <h5>Name:- {{name}}</h5>
+    <h5>Location:- {{location}}</h5>
+    <div>
+      <h5>Repo Details</h5>
+      <ul ng-repeat="repo in repo_data">
+         <a href={{repo.html_url}}> <li class="text-dark">{{repo.name}}</li> </a>
+      </ul>  
+    </div>
+  </body>
+
+
+</html>
